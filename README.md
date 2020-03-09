@@ -7,3 +7,7 @@ Actividad:
 2. Seleccionar el numero de indice del arreglo de la lista de procesos
 3. Los procesos tienen que tener un método de enviar y recibir de algoritmo de lamport
 4. Hacer un log del historial del proceso (debe salir los mensajes ordenados mediante el algoritmo de lamport)
+
+Instrucciones:
+Se debe escribir un comando, (add_process, send_message, log, log_all, exit)
+Se puede escribir help comando para ver la ayuda y sintaxis del comando. Ejemplo: help send_message<>

@@ -1,3 +1,4 @@
+from Message import Message
 class Process:
 
     def __init__(self, id):
@@ -7,7 +8,7 @@ class Process:
     
     #Message must be a string
     def receive_message(self, message, time_stamp):
-        timed_message = 'Message Time: ' + str(time_stamp) + ", Message: " + message
+        timed_message = Message(message, time_stamp)
         self.ReceivedMessages.append(timed_message)
         self.Time = max (time_stamp, self.Time) + 1
 
@@ -16,5 +17,5 @@ class Process:
         process_info += ' - Time: ' + str(self.Time) + '\n'
         process_info += 'Received Messages:'
         for message in self.ReceivedMessages:
-            process_info += ' { ' + message + ' } '
+            process_info += ' { ' + 'Message time: ' + str(message.Time) + ' Message: ' + message.Text + ' } '
         return process_info 
